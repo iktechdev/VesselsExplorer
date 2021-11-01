@@ -43,8 +43,10 @@ const reducer = (state = initial, action) => {
     if(action.type === "UPDATE_LIST"){
         let updatedList = client().then(
             (response)=>{
+                console.log('vessels model')
                 console.log(response)
-                return Object.values(response)
+                state = response
+                return response
             }
         )
         return updatedList

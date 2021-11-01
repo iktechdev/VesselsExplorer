@@ -13,10 +13,15 @@ const UpdateMap = props => {
 
   //percorre lista passada pelo state
   
-    console.log('sssss')
-    console.log(props.teste)
     
-  return <VesselsMap updated={props.teste}/>;
+    
+   var result = props.teste
+   console.log('updated map')
+   console.log(result)  
+  
+
+  return <VesselsMap vessels={result}/>;
+
 };
 
 const mapStateToProps = state => (
